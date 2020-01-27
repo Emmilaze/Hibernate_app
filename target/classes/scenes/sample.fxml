@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.Controller">
+    <children>
+        <TextField fx:id="findNumber" layoutX="193.0" layoutY="26.0" prefHeight="25.0" prefWidth="97.0" promptText="Print name">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+        <Button fx:id="search" layoutX="585.0" layoutY="55.0" mnemonicParsing="false" onAction="#searching" prefHeight="25.0" prefWidth="56.0" text="Search">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="delete" layoutX="568.0" layoutY="335.0" mnemonicParsing="false" onAction="#deleting" prefHeight="25.0" prefWidth="79.0" text="Delete">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="inserting" layoutX="73.0" layoutY="119.0" mnemonicParsing="false" onAction="#insert" text="Create record">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="13.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="resultArea" layoutX="7.0" layoutY="250.0" prefHeight="119.0" prefWidth="167.0" wrapText="true" />
+        <Label layoutX="9.0" layoutY="231.0" text="Information">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="findName" layoutX="300.0" layoutY="26.0" prefHeight="25.0" prefWidth="120.0" promptText="Print number">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+        <VBox layoutX="97.0" layoutY="24.0" spacing="4.0" />
+        <VBox layoutX="10.0" layoutY="56.0" prefWidth="67.0" spacing="12.0" />
+        <Separator layoutY="14.0" prefHeight="4.0" prefWidth="655.0" />
+        <Separator layoutX="177.0" layoutY="14.0" orientation="VERTICAL" prefHeight="364.0" prefWidth="7.0" />
+        <TableView fx:id="phonebookTable" editable="true" layoutX="193.0" layoutY="86.0" prefHeight="234.0" prefWidth="454.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="33.0" text="№" />
+                <TableColumn fx:id="nameColumn" onEditCommit="#columnEdit" text="Name" />
+                <TableColumn fx:id="yearColumn" onEditCommit="#columnEdit" prefWidth="114.0" text="Year" />
+                <TableColumn fx:id="numberColumn" onEditCommit="#columnEdit" prefWidth="96.0" text="Number" />
+                <TableColumn fx:id="addressColumn" onEditCommit="#columnEdit" prefWidth="144.0" text="Address" />
+            </columns>
+        </TableView>
+        <TextField fx:id="nameText" layoutX="5.0" layoutY="55.0" prefHeight="25.0" prefWidth="79.0" promptText="Name">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="yearText" layoutX="5.0" layoutY="86.0" prefHeight="25.0" prefWidth="79.0" promptText="Year">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="numberText" layoutX="98.0" layoutY="55.0" prefHeight="25.0" prefWidth="79.0" promptText="Number">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="addressText" layoutX="98.0" layoutY="86.0" prefHeight="25.0" prefWidth="79.0" promptText="Address">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+        <Label layoutX="9.0" layoutY="30.0" text="Create new record">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="findYear" layoutX="433.0" layoutY="26.0" prefHeight="25.0" prefWidth="152.0" promptText="Print year">
+            <font>
+                <Font name="Determination Mono(RUS BY LYAJK" size="12.0" />
+            </font>
+        </TextField>
+      <Button layoutX="488.0" layoutY="335.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="73.0" text="Clear" />
+    </children>
+</AnchorPane>
